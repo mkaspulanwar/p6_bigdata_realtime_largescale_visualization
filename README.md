@@ -1,7 +1,13 @@
 # PRAKTIKUM 3 BATCH DATA ANALYTICS & VISUALIZATION LAYER
-<p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-</p>
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" />
+<img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
+<img src="https://img.shields.io/badge/Parquet-50ABF1?style=for-the-badge&logo=databricks&logoColor=white" />
+
+</div>
 
 ## Deskripsi
 Repository ini berisi hasil Praktikum Week 3 mata kuliah **Teknologi Big Data** yang berfokus pada pembangunan **Analytics Layer** dan **Visualization Layer** dari pipeline data e-commerce. Pada praktikum ini, data hasil pemrosesan Spark dari tahap sebelumnya dilanjutkan ke proses agregasi metrik bisnis seperti **total revenue**, **top products**, **revenue per category**, dan **average transaction value per customer**, kemudian divisualisasikan dalam bentuk dashboard menggunakan **Microsoft Power BI**. Praktikum ini menunjukkan alur end-to-end mulai dari **clean data (Parquet)** hingga menjadi **insight bisnis** yang siap digunakan untuk pengambilan keputusan.
