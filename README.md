@@ -91,6 +91,48 @@ bigdata-project/
 ├── LICENSE
 └── README.md
 ```
+## Bukti Screenshots
+
+<table>
+<tr>
+<td align="center"><b>Struktur Project</b></td>
+<td align="center"><b>Generator Transaksi</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/struktur_project.png"/></td>
+<td><img src="screenshots/generator_berjalan.png"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Spark Streaming</b></td>
+<td align="center"><b>Folder data/serving</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/spark_streaming.png"/></td>
+<td><img src="screenshots/data_serving.png"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Dashboard Realtime 1</b></td>
+<td align="center"><b>Dashboard Realtime 2</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/dashboard1.png"/></td>
+<td><img src="screenshots/dashboard2.png"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Dashboard Realtime 3</b></td>
+<td align="center"><b>Dashboard Realtime 4</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/dashboard3.png"/></td>
+<td><img src="screenshots/dashboard4.png"/></td>
+</tr>
+</table>
+
+---
+
 ## Setup Environment
 ### 1) Prasyarat
 - Python 3.10+ (disarankan 3.12)
@@ -174,48 +216,6 @@ Sistem ini dirancang untuk mendukung keputusan cepat berbasis data:
 - KPI membantu melihat performa bisnis/operasional secara real-time.
 - Alert membantu mendeteksi kondisi kritis (misalnya lonjakan trafik/fare tinggi).
 - Dashboard menjadi antarmuka keputusan untuk tim operasional/manajemen.
-
-## Bukti Screenshots
-
-<table>
-<tr>
-<td align="center"><b>Struktur Project</b></td>
-<td align="center"><b>Generator Transaksi</b></td>
-</tr>
-<tr>
-<td><img src="screenshots/struktur_project.png"/></td>
-<td><img src="screenshots/generator_berjalan.png"/></td>
-</tr>
-
-<tr>
-<td align="center"><b>Spark Streaming</b></td>
-<td align="center"><b>Folder data/serving</b></td>
-</tr>
-<tr>
-<td><img src="screenshots/spark_streaming.png"/></td>
-<td><img src="screenshots/data_serving.png"/></td>
-</tr>
-
-<tr>
-<td align="center"><b>Dashboard Realtime 1</b></td>
-<td align="center"><b>Dashboard Realtime 2</b></td>
-</tr>
-<tr>
-<td><img src="screenshots/dashboard1.png"/></td>
-<td><img src="screenshots/dashboard2.png"/></td>
-</tr>
-
-<tr>
-<td align="center"><b>Dashboard Realtime 3</b></td>
-<td align="center"><b>Dashboard Realtime 4</b></td>
-</tr>
-<tr>
-<td><img src="screenshots/dashboard3.png"/></td>
-<td><img src="screenshots/dashboard4.png"/></td>
-</tr>
-</table>
-
----
 
 ## Troubleshooting Singkat
 - Jika Spark gagal start, cek Java:
