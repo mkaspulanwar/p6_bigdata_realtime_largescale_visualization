@@ -7,6 +7,15 @@
 ![Parquet](https://img.shields.io/badge/Format-Parquet-0A9EDC)
 ![Big Data](https://img.shields.io/badge/Domain-Big%20Data%20Analytics-2E7D32)
 
+## Tim Developer
+
+| Peran | Nama | NIM | Profil GitHub |
+| :--- | :--- | :--- | :--- |
+| **Pengembang Proyek** | M. Kaspul Anwar | 230104040212 | [![](https://img.shields.io/badge/GitHub-M.KaspulAnwar-181717?style=flat&logo=github)](https://github.com/mkaspulanwar) |
+| **Dosen Pengampu** | Muhayat, M. IT | - | [![](https://img.shields.io/badge/GitHub-Muhayat,M.IT-181717?style=flat&logo=github)](https://github.com/muhayat-lab) |
+
+---
+
 ## Tentang Praktikum
 Praktikum ini membangun **Decision-Oriented Big Data System** yang menggabungkan:
 - **Batch pipeline** untuk pemrosesan data historis e-commerce.
