@@ -49,10 +49,17 @@ while True:
             st.warning("⏳ Waiting for streaming transportation data...")
             time.sleep(REFRESH_INTERVAL)
             continue
+
         # =========================
         # PREPROCESS
         # =========================
         df = ta.preprocess(df)
+
+        # =========================
+        # BIG DATA OPTIMIZATION
+        # =========================
+        # Ambil subset data untuk visualisasi agar tidak berat
+        df_sample = df.tail(1000)
 
         # =========================
         # METRICS
@@ -96,20 +103,40 @@ while True:
         st.divider()
 
         # =========================
-        # VISUALISASI
+        # 🔥 VISUALISASI SKALA BESAR
         # =========================
+
         try:
             col1, col2 = st.columns(2)
 
+            # -------------------------------
+            # 1. TRAFFIC WINDOW (NEW - PRAKTIKUM 6)
+            # -------------------------------
+            st.subheader("📊 Real-Time Traffic (Window Aggregation)")
+
+            traffic_window = ta.traffic_per_window(df)
+
+            if traffic_window is not None:
+                st.line_chart(traffic_window)
+            # -------------------------------
+            # 2. FARE PER LOCATION
+            # -------------------------------
             with col1:
                 st.subheader("🚗 Fare per Location")
-                st.bar_chart(ta.fare_per_location(df))
-                with col2:
-                    st.subheader("🛵 Vehicle Distribution")
-                    st.bar_chart(ta.vehicle_distribution(df))
+                st.bar_chart(ta.fare_per_location(df_sample))
 
-            st.subheader("📈 Mobility Trend")
-            st.line_chart(ta.mobility_trend(df))
+            # -------------------------------
+            # 3. VEHICLE DISTRIBUTION
+            # -------------------------------
+            with col2:
+                st.subheader("🛵 Vehicle Distribution")
+                st.bar_chart(ta.vehicle_distribution(df_sample))
+
+            # -------------------------------
+            # 4. MOBILITY TREND (DOWNSAMPLED)
+            # -------------------------------
+            st.subheader("📈 Mobility Trend (Optimized)")
+            st.line_chart(ta.mobility_trend(df_sample))
 
         except Exception as e:
             st.warning(f"Visualization error: {e}")

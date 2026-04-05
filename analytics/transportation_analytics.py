@@ -57,6 +57,7 @@ def detect_peak_hour(df):
 
     df["hour"] = df["timestamp"].dt.hour
     return df.groupby("hour").size().idxmax()
+
 # =========================
 # VISUALIZATION DATA
 # =========================
@@ -78,6 +79,24 @@ def mobility_trend(df):
 
     df = df.set_index("timestamp")
     return df["fare"].resample("10s").sum()
+
+# =========================
+# NEW (PRAKTIKUM 6)
+# WINDOW AGGREGATION
+# =========================
+def traffic_per_window(df):
+    """
+    Agregasi jumlah trip per menit (Windowing)
+    Digunakan untuk visualisasi skala besar (efficient rendering)
+    """
+    if df.empty:
+        return None
+
+    df["timestamp"] = pd.to_datetime(df["timestamp"])
+    
+    return df.set_index("timestamp") \
+        .resample("1min") \
+        .size()
 
 # =========================
 # ANOMALY DETECTION
