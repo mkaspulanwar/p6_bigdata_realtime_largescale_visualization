@@ -150,8 +150,8 @@ bigdata-project/
 <td align="center"><b>Dashboard Realtime 2</b></td>
 </tr>
 <tr>
-<td><img src="screenshots/dashboard1.png"/></td>
-<td><img src="screenshots/dashboard2.png"/></td>
+<td><img src="screenshots/dashboard_1.png"/></td>
+<td><img src="screenshots/dashboard_2.png"/></td>
 </tr>
 
 <tr>
@@ -159,8 +159,8 @@ bigdata-project/
 <td align="center"><b>Dashboard Realtime 4</b></td>
 </tr>
 <tr>
-<td><img src="screenshots/dashboard3.png"/></td>
-<td><img src="screenshots/dashboard4.png"/></td>
+<td><img src="screenshots/dashboard_3.png"/></td>
+<td><img src="screenshots/dashboard_4.png"/></td>
 </tr>
 </table>
 
