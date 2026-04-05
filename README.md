@@ -1,4 +1,4 @@
-# Praktikum Big Data Week 6: Real-Time Analytics & Visualisasi Data Skala Besar
+﻿# Praktikum Big Data Week 6: Real-Time Analytics & Visualisasi Data Skala Besar
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
 ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-Structured%20Streaming-E25A1C?logo=apachespark&logoColor=white)
@@ -66,48 +66,48 @@ flowchart LR
 
 ```bash
 bigdata-project/
-|-- alerts/
-|   |-- __init__.py
-|   `-- transportation_alert.py
-|-- analytics/
-|   |-- __init__.py
-|   `-- transportation_analytics.py
-|-- dashboard/
-|   |-- dashboard_streamlit.py
-|   `-- dashboard_transportation.py
-|-- data/
-|   |-- raw/
-|   |   `-- ecommerce_raw.csv
-|   |-- clean/
-|   |-- curated/
-|   |-- serving/
-|   |   |-- stream/
-|   |   |-- transportation/
-|   |   |-- total_revenue/
-|   |   |-- top_products/
-|   |   |-- category_revenue/
-|   |   `-- avg_transaction/
-|   |-- checkpoints/
-|   |   `-- transportation/
-|   `-- ecommerce_raw.csv
-|-- logs/
-|   |-- batch_pipeline.log
-|   `-- stream_checkpoint/
-|-- screenshots/
-|-- scripts/
-|   |-- batch_pipeline_enterprise.py
-|   |-- analytics_layer.py
-|   |-- transaction_generator.py
-|   |-- streaming_layer.py
-|   `-- transportation/
-|       |-- trip_generator.py
-|       `-- streaming_trip_layer.py
-|-- stream_data/
-|   `-- transportation/
-|-- .gitignore
-|-- CONTRIBUTING.md
-|-- LICENSE
-`-- README.md
+├── .venv/                                 # Virtual environment lokal
+├── alerts/                                # Modul alert untuk use case transportation
+│   ├── __init__.py
+│   └── transportation_alert.py            # Rule-based alert (traffic/fare)
+├── analytics/                             # Modul analytics untuk transportation
+│   ├── __init__.py
+│   └── transportation_analytics.py        # KPI, trend, anomaly detection
+├── dashboard/                             # Aplikasi dashboard Streamlit
+│   ├── dashboard_streamlit.py             # Dashboard real-time e-commerce
+│   └── dashboard_transportation.py        # Dashboard decision-oriented transportation
+├── data/
+│   ├── checkpoints/                       # Spark streaming checkpoint
+│   │   └── transportation/
+│   ├── clean/                             # Data hasil cleaning (parquet/partitioned)
+│   ├── curated/                           # Data agregasi bisnis
+│   ├── raw/
+│   │   └── ecommerce_raw.csv              # Dataset mentah utama batch
+│   └── serving/                           # Data siap konsumsi dashboard
+│       ├── avg_transaction/
+│       ├── category_revenue/
+│       ├── stream/                        # Output streaming e-commerce
+│       ├── top_products/
+│       ├── total_revenue/
+│       └── transportation/                # Output streaming transportation
+├── logs/
+│   ├── batch_pipeline.log                 # Log proses batch pipeline
+│   └── stream_checkpoint/                 # Checkpoint streaming e-commerce
+├── screenshots/                           # Screenshot dokumentasi hasil praktikum
+├── scripts/                               # Pipeline utama praktikum
+│   ├── analytics_layer.py                 # Analytics + serving layer (e-commerce)
+│   ├── batch_pipeline_enterprise.py       # Batch processing pipeline
+│   ├── streaming_layer.py                 # Streaming ingestion e-commerce
+│   ├── transaction_generator.py           # Generator transaksi e-commerce
+│   └── transportation/
+│       ├── streaming_trip_layer.py       # Streaming ingestion transportation
+│       └── trip_generator.py              # Generator trip transportation
+├── stream_data/                           # Input simulasi data streaming
+│   └── transportation/
+├── .gitignore
+├── CONTRIBUTING.md
+├── LICENSE
+└── README.md
 ```
 ## Penjelasan Komponen Utama
 
@@ -126,16 +126,43 @@ bigdata-project/
 
 ## Bukti Screenshots
 
-| No | Bukti | File Screenshot |
-| :-- | :-- | :-- |
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
-| 6 |  |  |
-| 7 |  |  |
-| 8 |  |  |
+<table>
+<tr>
+<td align="center"><b>Struktur Project</b></td>
+<td align="center"><b>Generator Transaksi</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/struktur_project.png"/></td>
+<td><img src="screenshots/generator_berjalan.png"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Spark Streaming</b></td>
+<td align="center"><b>Folder data/serving</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/spark_streaming.png"/></td>
+<td><img src="screenshots/data_serving.png"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Dashboard Realtime 1</b></td>
+<td align="center"><b>Dashboard Realtime 2</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/dashboard1.png"/></td>
+<td><img src="screenshots/dashboard2.png"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Dashboard Realtime 3</b></td>
+<td align="center"><b>Dashboard Realtime 4</b></td>
+</tr>
+<tr>
+<td><img src="screenshots/dashboard3.png"/></td>
+<td><img src="screenshots/dashboard4.png"/></td>
+</tr>
+</table>
 
 ---
 
@@ -276,4 +303,5 @@ java -version
 ## Penutup
 
 Praktikum Week 6 ini menunjukkan implementasi sistem **real-time analytics** yang tidak hanya memproses data streaming, tetapi juga menyajikan visualisasi yang lebih siap skala besar melalui window aggregation, sampling data, dan monitoring berbasis dashboard interaktif.
+
 
