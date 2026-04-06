@@ -133,7 +133,7 @@ bigdata-project/
 </tr>
 <tr>
 <td><img src="screenshots/struktur_project.png"/></td>
-<td><img src="screenshots/generator_berjalan.png"/></td>
+<td><img src="screenshots/trip_generator.png"/></td>
 </tr>
 
 <tr>
